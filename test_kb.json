@@ -1,0 +1,23 @@
+{
+    "Vladimir Putin": {
+        "category": "Person",
+        "explanation": "Vladimir Vladimirovich Putin (born 7 October 1952) is a Russian politician and former intelligence officer who has served as President of Russia since 2012, having previously served from 2000 to 2008. Putin also served as Prime Minister of Russia from 1999 to 2000 and again from 2008 to 2012.",
+        "texts": [
+            "Vladimir Putin visited Moscow to meet with Apple representatives."
+        ]
+    },
+    "Apple": {
+        "category": "Organization",
+        "explanation": "An apple is the round, edible fruit of an apple tree (Malus spp.). Fruit trees of the orchard or domestic apple (Malus domestica), the most widely grown in the genus, are cultivated worldwide.",
+        "texts": [
+            "Vladimir Putin visited Moscow to meet with Apple representatives."
+        ]
+    },
+    "Moscow": {
+        "category": "Location",
+        "explanation": "Moscow is the capital and largest city of Russia, standing on the Moskva River in Central Russia. It has a population estimated at over 13 million residents within the city limits, over 19.1 million residents in the urban area, and over 21.5 million residents in its metropolitan area.",
+        "texts": [
+            "Vladimir Putin visited Moscow to meet with Apple representatives."
+        ]
+    }
+}
