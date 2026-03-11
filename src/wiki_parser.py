@@ -45,5 +45,5 @@ if __name__ == "__main__":
     print(parser.get_explanation("Apple"))
     print("-" * 50)
     
-    print("Проверка на поиск чего-то несуществующего 'Qwertyuiop12345':")
+    print("Проверка на поиск чего-то несуществующего 'Qwerty12345':")
     print(parser.get_explanation("Qwertyuiop12345"))

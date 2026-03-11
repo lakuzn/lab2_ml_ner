@@ -16,6 +16,10 @@ class NERPipeline:
             'bias': 1.0,
             'word.lower()': word.lower(),
             'word[-3:]': word[-3:],
+            'word[-2:]': word[-2:], 
+            'word[:2]': word[:2],  
+            'word[:3]': word[:3],   
+            'word.length': len(word),
             'word.isupper()': word.isupper(),
             'word.istitle()': is_title,
             'word.isdigit()': word.isdigit(),
@@ -53,7 +57,7 @@ class NERPipeline:
             word = tokens[i]
             
             if word.lower() == "and" and predictions[i] != '0':
-                predictions[i] = '0' # Обнуляем "and", чтобы сборщик начал новую сущность
+                predictions[i] = '0' # Обнуляем and, чтобы сборщик начал новую сущность
                 
             if predictions[i] in ['15', '7', '1', '3']: 
                 idx = i - 1
@@ -62,7 +66,7 @@ class NERPipeline:
                     i_tag = str(base_tag + 1) # Тег продолжения
                     
                     predictions[idx] = str(base_tag)   # Предыдущее слово становится началом
-                    predictions[idx+1] = str(i_tag)    # Текущее сдвигается в "продолжение"
+                    predictions[idx+1] = str(i_tag)    # Текущее сдвигается в продолжение
                     idx -= 1
 
         # Сборщик
@@ -89,7 +93,7 @@ class NERPipeline:
                 if current_entity_words and (current_tag == tag_num - 1 or current_tag == tag_num):
                     current_entity_words.append(word)
                 else:
-                    # Если I оторвался от начала (например, из-за and)
+                    # Если I оторвался от начала
                     if current_entity_words:
                         entities.append({'word': " ".join(current_entity_words), 'tag_id': str(current_tag)})
                     current_entity_words = [word]
